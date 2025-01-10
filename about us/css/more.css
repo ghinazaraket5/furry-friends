@@ -1,0 +1,61 @@
+body{
+    background-color: #ffffff;
+    font-family: "Walter Turncoat", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+#readmore{
+    padding: 100px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h2{
+    font-size: 40px;
+    color:rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.title p{
+    font-size: 14px;
+    color: #ba8634;
+    font-family: "Lugrasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;   
+    align-items: center; 
+}
+
+.about video{
+    width:450px;
+    height: 300px;
+    border-radius: 6%;
+}
+
+.about p{
+    color: #000000;
+    margin-right: 7rem ;
+    padding-left: 10px;
+    font-weight: 500;
+    line-height: 2;
+    font-family: "Lugrasimo", serif;
+    font-style: normal;
+}
+
+span{
+    color:#ba8634;
+}

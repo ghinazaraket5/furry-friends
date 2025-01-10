@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Furry Friends</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Walter+Turncoat&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <div id="navbar">
+                <img src="img/logo.png">
+                <nav>
+                    <ul>
+                        <li><a href="#HOME">HOME</a></li>
+                        <li><a href="#aboutus">ABOUT US</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#team">TEAM</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+            <div class="content">
+                <h1><span class=qn>"</span>LOVING HOMES AWAY FROM HOME<span class=qn>"</span></h1>
+                <p>providing loving care and a cozy environment for your furry friends!</p>
+                <button id="book">Book Their Adventure</button>
+                <div id="bookingform" style="display: none;">
+                    <form class="bookingForm">
+                        <label for="Name">NAME:</label>
+                        <input type="text" id="Name" required><br><br>
+
+                        <label for="pet">what is your pet:</label>
+                        <input type="text" id="pet" required><br><br>
+
+
+                        <label for="Date">DATE:</label>
+                        <input type="date" id="Date" required><br><br>
+
+                        <label for="Time">TIME:</label>
+                        <input type="time" id="Time" required><br><br>
+
+
+                        <button type="submit">BOOK NOW</button>
+                    </form>
+                </div>                                                                           
+                <script>
+                    const bookButton = document.getElementById('book');
+                    const bookingFormContainer = document.getElementById('bookingform');
+                    bookButton.addEventListener('click', () => {
+                        bookingFormContainer.style.display = bookingFormContainer.style.display === 'none' ? 'block' : 'none';
+                    });
+                    const bookingForm = document.querySelector('.bookingForm');
+                    bookingForm.addEventListener('submit', (event) => {
+                        event.preventDefault(); 
+                        const name = document.getElementById('Name').value.trim();
+                        const pet = document.getElementById('pet').value.trim();
+                        const date = document.getElementById('Date').value;
+                        const time = document.getElementById('Time').value;
+                        if (name && pet && date && time) {
+                            alert(`Booking request submitted for ${name} on ${date} at ${time} for our ${pet} friend.`);
+                            bookingFormContainer.style.display = 'none';
+                            bookingForm.reset();
+                        } else {
+                            alert('Please fill in all required fields.');
+                        }
+                    });
+                    const today = new Date().toISOString().split('T')[0];
+                    document.getElementById('Date').setAttribute('min', today);
+                </script>
+            </div>
+        </header>
+
+        <main>
+
+            <section id="aboutus">
+                <div class="container">
+                    <div class="title">
+                        <h2>"Welcome to Your Pet’s Second Home"</h2>
+                        <p>Compassionate care, happy tails, and peace of mind for you and your furry family.</p>
+                    </div>
+                    <div class="contant">
+                        <div class="about">
+                            <p><span>"FURRY FRIENDS"</span>, where your pets are family! We’re passionate about providing loving, personalized care for your furry companions, ensuring their happiness, health, and well-being. Whether it’s playful walks, gentle grooming, or cozy overnight stays, we’re here to make tails wag and whiskers purr. Since 2015, pet owners in [Location] have trusted us to deliver exceptional care with compassion and expertise. Ready to give your pets the love they deserve? </p>
+                            <img src="./img/background.jpg">
+                        </div>
+                        <a href="./about us/more.html" class="read">Read MORE</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services">
+                <div class="container">
+                    <div class="title">
+                        <h2>PET CARE SERVICES</h2>
+                        <p>"Loving Care for Every Paw and Whisker"</p>
+                    </div>
+                    <div class="item">
+                        <div class="serv">
+                            <h3>PET SITING</h3>
+                            <img src="./img/sit.jpg">
+                        </div>
+                        <div class="serv">
+                            <h3>PET WALKING</h3>
+                            <img src="./img/walking.jpg">
+                        </div>
+                        <div class="serv">
+                            <h3>OVER NIGHT CARE</h3>
+                            <img src="./img/overnight.jpg">
+                        </div>
+                        <div class="serv">
+                            <h3>TRAINING</h3>
+                            <img src="./img/training.jpg">
+                        </div>
+                        <div class="serv">
+                            <h3>PET MEDICAL</h3>
+                            <img src="./img/med.jpg">
+                        </div>
+                        <div class="serv">
+                            <h3>PET CARING</h3>
+                            <img src="./img/caring.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="team">
+                <div class="container">
+                    <div class="title">
+                        <h2>"FRIENDLY TEAM"</h2>
+                        <p>"Experienced, Compassionate, Trusted"</p>
+                    </div>
+                    <div class="member">
+                        <div class="staff">
+                            <p><span>"FURRY FRIENDS"</span>staff is a group of experienced and compassionate professionals who are dedicated to providing exceptional care for your furry companions. Whether it's feeding, grooming, or ensuring playtime fun, we treat every pet as if they were our own. Trained to handle pets of all sizes and needs, our team creates a safe, loving, and stress-free environment to keep tails wagging and whiskers happy. Trust us to care for your pets with the attention and love they deserve!"</p>
+                            <video autoplay muted loop>
+                                <source src="./img/vd.mp4" type="video/mp4">
+                            </video>      
+                        </div>
+                        <a href="./our team/team.html" class="meet">Meet Our Caring Team</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <div class="contentofcontact">
+                        <div class="info">
+                          <div><h3>ADRESS</h3>
+                            <p><i class="fa-solid fa-location-pin"></i>sainte therese st.,al hadath,mont-linan</p>
+                            <p><i class="fa-solid fa-phone"></i>+961 81 086 275</p>
+                            <p><i class="fa-solid fa-envelope"></i>Ghinazrk@gmail.com</p>
+                          </div>
+                        <div>
+                            <h3>WORKING HOURS</h3>
+                            <p><i class="fa-solid fa-clock"></i>24/7 HOURS</p>
+                            <p><i class="fa-solid fa-calendar-days"></i>365/365 DAYS</p>
+                        </div>
+                        <div>
+                            <h3>FOLLOW US</h3>
+                            <a href=""><i><i class="fa-brands fa-facebook"></i></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                            <a href=""><i><i class="fa-brands fa-twitter"></i></i></a>
+                        </div>
+                        </div>
+                    <form id="informations">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
+                        <button type="submit" class="cont">SUBMIT</button>
+                    </form>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const form = document.getElementById('informations');
+                            form.addEventListener('submit', (event) => {
+                                event.preventDefault();
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const subject = document.getElementById('subject').value;
+                                const message = document.getElementById('message').value;
+                                if (name && email && subject && message) {
+                                    alert(`Thank you, ${name}! Your message has been submitted.\n\nDetails:\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
+                                    form.reset();
+                                } 
+                                else {
+                                    alert('Please fill in all required fields.');
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+            </section>
+
+        </main>
+    
+
+
+      
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
