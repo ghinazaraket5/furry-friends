@@ -205,6 +205,12 @@ span{
 
 
 /*services*/
+#services{
+    margin-top: 100px;
+    padding: 100px;
+    height: 80vh;
+    margin-bottom: 100px;
+}
 .item{
     display: flex;
     flex-wrap: wrap;
@@ -226,6 +232,12 @@ span{
 }
 
 /*team*/
+#team{
+    margin-top: 100px;
+    padding: 100px;
+    height: 80vh;
+    margin-bottom: 100px;
+}
 
 .staff{
     display: flex;
@@ -341,4 +353,15 @@ textarea{
 .cont:hover{
     background-color: #ba8634;
     color:white;
+}
+
+/*footer*/
+footer{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 15px;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 12px;
 }
